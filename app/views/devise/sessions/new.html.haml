@@ -1,2 +1,7 @@
-%h2 Log in
-= link_to 'GitHub Login', user_github_omniauth_authorize_path, class: 'button'
+%h1.title Log in
+%h2.subtitle Please log in to check the three inspired books of others!
+
+= link_to user_github_omniauth_authorize_path, class: 'button is-dark' do
+  = icon('fab', 'github')
+  %span.ml-xs
+    GitHub Login

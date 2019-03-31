@@ -9,4 +9,25 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %main
+      %nav{class: 'navbar', role: 'navigation', aria: {label: 'main navigation'}}
+        .navbar-brand
+          TIB
+        .navbar-end
+          .navbar-item
+            .field.is-grouped
+              = link_to user_github_omniauth_authorize_path, class: 'button is-dark' do
+                = icon('fab', 'github')
+                %span.ml-xs
+                  GitHub Login
+              = link_to destroy_user_session_path, method: :delete, class: 'button is-link' do
+                Sign out
+      %section.hero.is-primary
+        .hero-body
+          .container
+            %h1.title
+              Three Inspired Books
+
+      %section.section
+        .container
+          = yield

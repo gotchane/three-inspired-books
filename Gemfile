@@ -19,6 +19,7 @@ gem 'hamlit-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'bulma-rails'
+gem 'font-awesome-sass'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
